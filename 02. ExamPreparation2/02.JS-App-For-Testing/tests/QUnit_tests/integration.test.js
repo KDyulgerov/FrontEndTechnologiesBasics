@@ -56,7 +56,7 @@ QUnit.module('User Functionalities', () => {
         await assert.ok(responseJson.hasOwnProperty('accessToken'), 'accessToken exists');
         await assert.strictEqual(typeof responseJson.accessToken, 'string', 'accessToken value is a string');
 
-        token = responseJson.token;
+        token = responseJson.accessToken;
         userId = responseJson._id;
         sessionStorage.setItem('theater-user', JSON.stringify(user));
     });
